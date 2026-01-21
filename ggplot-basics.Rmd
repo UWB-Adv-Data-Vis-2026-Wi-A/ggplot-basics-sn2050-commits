@@ -12,7 +12,6 @@ pacman::p_load(tidyverse,nycflights13,gapminder,socviz)
 
 ### Figure 3.13
 
-Here you will make your figure. You can write a commit for each figure or error leading up to the figure that matches. Be sure to include commits of the transitions and name the figures such as "Recreating Figure 3.4" and "Recreating Figure 3.7". Practicing frequent commits is a great habit.
 
 ```{r 3.13 plot}
 
