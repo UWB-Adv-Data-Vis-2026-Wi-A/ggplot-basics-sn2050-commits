@@ -43,6 +43,21 @@ p + geom_point(mapping = aes(color = continent)) +
 
 ### Orignal graph
 
+```{r Original Plot}
+
+mpg %>%
+  mutate(class = fct_reorder(class, hwy, .fun='median')) %>% 
+  ggplot( aes(x=class, y=hwy, fill=class)) + 
+    geom_boxplot() + 
+    theme(legend.position="none") +
+  labs(title = "Highway Miles per Gallon by Vehicle Classification", 
+           x = "Vehicle Type",
+           y = "Highway MPG" ) +
+  theme(axis.title.x = element_text(margin = margin(t = 10)))
+
+
+```
+
 Continue practicing by accessing an unfamiliar data set from another package.
 You can load a dataset of your choice to show you can build a graphic using ggplot layers.
 Here are some sample data sets [https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)
